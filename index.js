@@ -4,7 +4,7 @@ const requestHandler = (request, response) => {
     console.log(request.url)
 	response.setHeader('X-Author', 'minnemullin');
 	response.setHeader('Access-Control-Allow-Origin', '*');
-    response.end('')
+    response.end('minnemullin')
 }
 const server = http.createServer(requestHandler)
 server.listen(port, (err) => {
