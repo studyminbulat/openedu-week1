@@ -3,6 +3,7 @@ const port = process.env.PORT || 3000
 const requestHandler = (request, response) => {
     console.log(request.url)
 	response.setHeader('X-Author', 'minnemullin');
+	response.setHeader('Access-Control-Allow-Origin', '*');
     response.end('')
 }
 const server = http.createServer(requestHandler)
